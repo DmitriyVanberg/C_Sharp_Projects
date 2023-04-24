@@ -1,0 +1,23 @@
+using System;
+
+namespace Guess_the_number
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            Random rnd = new Random();
+            short first_attempt = 0;
+            int random_number = rnd.Next(0, 9);
+
+            Console.WriteLine("Enter the number: ");
+            first_attempt = Convert.ToInt16(Console.ReadLine());
+
+            if (first_attempt == random_number)
+                Console.WriteLine("Congratulations! You win!");
+
+            else if (first_attempt == (random_number - 1))
+                Console.WriteLine("Ohh!Near...");
+            else
+                Console.WriteLine("You loose!");
+            Console.ReadLine();
